@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiStar } from 'react-icons/fi';
+import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { Project } from '@/lib/projects';
 
 interface ProjectCardProps {
@@ -9,89 +9,155 @@ interface ProjectCardProps {
   index: number;
 }
 
+// Category configurations with icons and colors
+const categoryConfig: Record<string, { icon: string; gradient: string; badge: string }> = {
+  'ml': {
+    icon: '🤖',
+    gradient: 'from-blue-500 via-blue-600 to-purple-600',
+    badge: 'bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-500/30',
+  },
+  'data-science': {
+    icon: '📊',
+    gradient: 'from-green-500 via-emerald-600 to-teal-600',
+    badge: 'bg-green-500/20 text-green-700 dark:text-green-300 border border-green-500/30',
+  },
+  'full-stack': {
+    icon: '🌐',
+    gradient: 'from-purple-500 via-pink-600 to-red-600',
+    badge: 'bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-500/30',
+  },
+  'research': {
+    icon: '🔬',
+    gradient: 'from-orange-500 via-amber-600 to-yellow-600',
+    badge: 'bg-orange-500/20 text-orange-700 dark:text-orange-300 border border-orange-500/30',
+  },
+};
+
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const config = categoryConfig[project.category] || categoryConfig['ml'];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300"
+      whileHover={{ y: -8 }}
+      className="group glass rounded-xl overflow-hidden border-2 border-gray-200/50 dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl transition-all duration-300 relative"
     >
-      {/* Project Image */}
-      <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
+      {/* Gradient border on hover */}
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm"></div>
+
+      {/* Top banner with tech-colored gradient */}
+      <div className={`relative h-40 bg-gradient-to-br ${config.gradient} overflow-hidden`}>
+        {/* Animated diagonal shimmer overlay */}
+        <motion.div
+          initial={{ x: '-100%', y: '-100%' }}
+          whileHover={{ x: '100%', y: '100%' }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent transform rotate-45"
+        />
+        
+        {/* Category icon */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-6xl opacity-20">🚀</div>
+          <div className="text-8xl opacity-20 group-hover:scale-110 transition-transform duration-300">
+            {config.icon}
+          </div>
         </div>
-        <div className="absolute top-4 right-4">
-          <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-            project.category === 'ml' ? 'bg-blue-500 text-white' :
-            project.category === 'data-science' ? 'bg-green-500 text-white' :
-            project.category === 'full-stack' ? 'bg-purple-500 text-white' :
-            'bg-yellow-500 text-white'
-          }`}>
+
+        {/* Category badge */}
+        <div className="absolute top-4 right-4 z-10">
+          <span className={`px-3 py-1.5 text-xs font-bold rounded-full backdrop-blur-sm ${config.badge} flex items-center gap-1.5`}>
+            <span>{config.icon}</span>
             {project.category.toUpperCase().replace('-', ' ')}
           </span>
         </div>
+
+        {/* Stars/Language indicator (placeholder) */}
+        <div className="absolute bottom-3 left-4 flex items-center gap-2 text-white/90 text-sm">
+          <span>⭐</span>
+          <span className="font-medium">Open Source</span>
+        </div>
       </div>
 
-      {/* Project Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+      {/* Card body */}
+      <div className="p-6 space-y-4">
+        {/* Project title */}
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-gradient transition-all duration-300">
           {project.title}
         </h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 italic">
+
+        {/* Tagline */}
+        <p className="text-sm text-gray-600 dark:text-gray-400 italic">
           {project.tagline}
         </p>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
+
+        {/* Description with line clamp */}
+        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed line-clamp-3">
           {project.description}
         </p>
 
-        {/* Metrics */}
+        {/* Metrics section */}
         {project.metrics && project.metrics.length > 0 && (
-          <div className="flex flex-wrap gap-3 mb-4">
+          <div className="flex flex-wrap gap-2">
             {project.metrics.map((metric, idx) => (
-              <div key={idx} className="bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-lg">
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05 }}
+                className="glass px-3 py-1.5 rounded-lg border border-blue-500/20 hover:border-blue-500/50 transition-colors"
+              >
                 <span className="text-xs text-gray-600 dark:text-gray-400">{metric.label}: </span>
-                <span className="text-sm font-bold text-blue-600 dark:text-blue-400">{metric.value}</span>
-              </div>
+                <span className="text-sm font-bold text-gradient">{metric.value}</span>
+              </motion.div>
             ))}
           </div>
         )}
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Tech stack with colored badges */}
+        <div className="flex flex-wrap gap-2">
           {project.tags.slice(0, 4).map((tag, idx) => (
             <span
               key={idx}
-              className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded"
+              className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 text-gray-700 dark:text-gray-300 rounded-full border border-gray-300/30 dark:border-gray-600/30"
             >
               {tag}
             </span>
           ))}
+          {project.tags.length > 4 && (
+            <span className="px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
+              +{project.tags.length - 4}
+            </span>
+          )}
         </div>
 
-        {/* Links */}
-        <div className="flex items-center gap-4">
-          <a
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
+
+        {/* Footer with action buttons */}
+        <div className="flex items-center gap-3">
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-medium transition-all shadow-md hover:shadow-lg text-sm"
           >
-            <FiGithub size={20} />
-            <span className="text-sm font-medium">View Code</span>
-          </a>
+            <FiGithub size={16} />
+            <span>View Code</span>
+          </motion.a>
           {project.demo && (
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 glass border-2 border-purple-500/30 hover:border-purple-500/60 text-gray-900 dark:text-white rounded-lg font-medium transition-all hover:shadow-lg text-sm"
             >
-              <FiExternalLink size={20} />
-              <span className="text-sm font-medium">Live Demo</span>
-            </a>
+              <FiExternalLink size={16} />
+              <span>Demo</span>
+            </motion.a>
           )}
         </div>
       </div>
