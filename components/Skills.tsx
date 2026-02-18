@@ -59,7 +59,8 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="py-20 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800"    >
+      className="py-20 bg-white dark:bg-[#0a0a0a]"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,10 +68,10 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
         </motion.div>
@@ -94,7 +95,7 @@ export default function Skills() {
                   <div className={`text-3xl p-2 rounded-lg ${colors.bg}`}>
                     {icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                     {category.name}
                   </h3>
                 </div>
@@ -104,7 +105,7 @@ export default function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skill.name} className="group/skill">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <span className="text-sm font-medium text-slate-600 dark:text-slate-300">
                           {skill.name}
                         </span>
                         <div className="flex items-center gap-2">
@@ -112,12 +113,12 @@ export default function Skills() {
                             {skill.level}%
                           </span>
                           {/* Proficiency badge on hover */}
-                          <span className="text-xs opacity-0 group-hover/skill:opacity-100 transition-opacity bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-full text-gray-700 dark:text-gray-300">
+                          <span className="text-xs opacity-0 group-hover/skill:opacity-100 transition-opacity bg-blue-50 dark:bg-slate-700 px-2 py-1 rounded-full text-blue-600 dark:text-slate-300">
                             {getProficiencyLabel(skill.level)}
                           </span>
                         </div>
                       </div>
-                      <div className="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                      <div className="relative w-full bg-blue-100/50 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden">
                         {/* Animated skill bar with shimmer effect */}
                         <motion.div
                           initial={{ width: 0 }}

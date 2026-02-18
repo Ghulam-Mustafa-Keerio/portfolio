@@ -43,7 +43,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-white dark:from-gray-900 dark:to-black dark:bg-gradient-to-b">
+    <footer className="relative bg-white dark:from-slate-900 dark:to-[#050505] dark:bg-gradient-to-b">
       {/* Gradient top border */}
       <div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
 
@@ -57,17 +57,17 @@ export default function Footer() {
             >
               GMK
             </motion.h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
               Machine Learning Engineer | Data Scientist | Full-Stack Developer
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-slate-500 dark:text-slate-400">
               Building intelligent systems that understand human emotions
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+            <h4 className="text-lg font-semibold mb-4 text-slate-800 dark:text-white">
               Quick Links
             </h4>
             <ul className="grid grid-cols-2 gap-2">
@@ -76,7 +76,7 @@ export default function Footer() {
                   <motion.button
                     whileHover={{ x: 4 }}
                     onClick={() => scrollToSection(link.href)}
-                    className="text-gray-600 dark:text-gray-400 hover:text-gradient transition-colors text-sm"
+                    className="text-slate-500 dark:text-slate-400 hover:text-gradient transition-colors text-sm"
                   >
                     {link.name}
                   </motion.button>
@@ -87,7 +87,7 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+            <h4 className="text-lg font-semibold mb-4 text-slate-800 dark:text-white">
               Connect With Me
             </h4>
             <div className="flex gap-3">
@@ -109,18 +109,18 @@ export default function Footer() {
                 );
               })}
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-4">
               Let&apos;s create something amazing together
             </p>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent mb-8"></div>
+        <div className="h-px bg-gradient-to-r from-transparent via-blue-200/40 dark:via-slate-700 to-transparent mb-8"></div>
 
         {/* Bottom section */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-center text-gray-600 dark:text-gray-400 text-sm flex items-center gap-2">
+          <p className="text-center text-slate-500 dark:text-slate-400 text-sm flex items-center gap-2">
             <span>Built with</span>
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
@@ -130,7 +130,7 @@ export default function Footer() {
             </motion.span>
             <span>using Next.js & Tailwind</span>
           </p>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-slate-500 dark:text-slate-400">
             © {new Date().getFullYear()} Ghulam Mustafa Keerio. All rights reserved.
           </p>
         </div>

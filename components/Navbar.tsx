@@ -54,7 +54,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
+          ? 'bg-white/70 dark:bg-[#0a0a0a]/80 backdrop-blur-xl shadow-sm border-b border-blue-100/30 dark:border-white/5'
           : 'bg-transparent'
       }`}
     >
@@ -82,7 +82,7 @@ export default function Navbar() {
                   className={`relative z-10 ${
                     activeSection === item.href.substring(1)
                       ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                 >
                   {item.name}
@@ -108,7 +108,7 @@ export default function Navbar() {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 dark:text-gray-300 p-2"
+              className="text-slate-600 dark:text-slate-300 p-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -125,7 +125,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 overflow-hidden"
+            className="md:hidden bg-white/90 dark:bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-blue-100/30 dark:border-white/5 overflow-hidden"
           >
             <div className="px-4 pt-2 pb-4 space-y-2">
               {navItems.map((item, index) => (
@@ -137,8 +137,8 @@ export default function Navbar() {
                   onClick={() => scrollToSection(item.href)}
                   className={`block w-full text-left px-4 py-3 rounded-lg transition-all ${
                     activeSection === item.href.substring(1)
-                      ? 'bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 text-gradient font-semibold'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      ? 'bg-gradient-to-r from-blue-50/60 to-purple-50/60 dark:from-blue-900/20 dark:to-purple-900/20 text-gradient font-semibold'
+                      : 'text-slate-600 dark:text-slate-300 hover:bg-blue-50/30 dark:hover:bg-white/5'
                   }`}
                 >
                   {item.name}

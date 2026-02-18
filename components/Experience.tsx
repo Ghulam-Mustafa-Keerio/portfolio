@@ -57,7 +57,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="py-20 bg-white dark:from-gray-800 dark:to-gray-900 dark:bg-gradient-to-b"
+      className="py-20 bg-white dark:from-slate-900 dark:to-[#0a0a0a] dark:bg-gradient-to-b"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -66,10 +66,10 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Experience & <span className="text-gradient">Education</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             My professional journey and academic background
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ export default function Experience() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           {/* Experience Timeline */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-3">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
               <div className="p-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg">
                 <FiBriefcase className="text-white" size={24} />
               </div>
@@ -122,10 +122,10 @@ export default function Experience() {
                         {exp.period}
                       </span>
                     </div>
-                    <p className="text-gray-900 dark:text-white font-medium mb-3">
+                    <p className="text-slate-800 dark:text-white font-medium mb-3">
                       {exp.organization}
                     </p>
-                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
                       {exp.description}
                     </p>
                     <ul className="space-y-2">
@@ -135,7 +135,7 @@ export default function Experience() {
                           initial={{ opacity: 0, x: -10 }}
                           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                           transition={{ duration: 0.3, delay: index * 0.2 + idx * 0.1 }}
-                          className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
+                          className="text-sm text-slate-600 dark:text-slate-300 flex items-start gap-2"
                         >
                           <FiCheckCircle className="text-green-500 flex-shrink-0 mt-0.5" size={16} />
                           {achievement}
@@ -150,7 +150,7 @@ export default function Experience() {
 
           {/* Education */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center gap-3">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
               <div className="p-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg">
                 <FiAward className="text-white" size={24} />
               </div>
@@ -172,17 +172,17 @@ export default function Experience() {
                     </div>
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-2">
-                        <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                        <h4 className="text-lg font-bold text-slate-900 dark:text-white">
                           {edu.degree}
                         </h4>
                         <span className="px-3 py-1 text-xs font-semibold bg-purple-500/20 text-purple-700 dark:text-purple-300 rounded-full border border-purple-500/30 whitespace-nowrap">
                           {edu.period}
                         </span>
                       </div>
-                      <p className="text-gray-900 dark:text-white font-medium mb-2">
+                      <p className="text-slate-800 dark:text-white font-medium mb-2">
                         {edu.institution}
                       </p>
-                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                      <p className="text-sm text-slate-600 dark:text-slate-300">
                         <span className="font-semibold">Focus:</span> {edu.focus}
                       </p>
                     </div>
@@ -197,7 +197,7 @@ export default function Experience() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="glass rounded-xl p-6 border border-purple-500/20"
               >
-                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                   <span className="text-2xl">🏆</span>
                   Key Achievements
                 </h4>
@@ -212,7 +212,7 @@ export default function Experience() {
                       initial={{ opacity: 0, x: -10 }}
                       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                       transition={{ duration: 0.3, delay: 0.5 + idx * 0.1 }}
-                      className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
+                      className="text-sm text-slate-600 dark:text-slate-300 flex items-start gap-2"
                     >
                       <FiCheckCircle className="text-purple-500 flex-shrink-0 mt-0.5" size={16} />
                       {achievement}
@@ -231,7 +231,7 @@ export default function Experience() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-3">
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center justify-center gap-3">
             <span className="text-3xl">🚀</span>
             Currently Learning
           </h3>

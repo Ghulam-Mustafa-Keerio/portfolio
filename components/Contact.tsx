@@ -68,7 +68,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-20 bg-white dark:from-gray-900 dark:to-gray-800 dark:bg-gradient-to-b relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-white to-blue-50/20 dark:from-[#0a0a0a] dark:to-slate-900 relative overflow-hidden"
     >
       {/* Background glow (dark mode only) */}
       <div className="absolute inset-0 hidden dark:block dark:bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.15),transparent_50%)]"></div>
@@ -81,10 +81,10 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Let&apos;s Build Something <span className="text-gradient">Amazing Together</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             Ready to turn your ideas into reality? Drop me a message and let&apos;s start creating!
           </p>
         </motion.div>
@@ -108,16 +108,16 @@ export default function Contact() {
                   href={info.href}
                   target={info.href.startsWith('http') ? '_blank' : undefined}
                   rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="glass p-6 rounded-xl border border-gray-200/50 dark:border-gray-700/50 hover:border-transparent hover:shadow-xl transition-all flex items-start gap-4 group block"
+                  className="glass p-6 rounded-xl border border-blue-100/40 dark:border-white/10 hover:border-transparent hover:shadow-xl transition-all flex items-start gap-4 group block"
                 >
                   <div className={`p-3 bg-gradient-to-r ${info.gradient} rounded-lg shadow-lg group-hover:scale-110 transition-transform`}>
                     <info.icon className="text-white" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-gradient transition-colors">
+                    <h4 className="font-semibold text-slate-800 dark:text-white mb-1 group-hover:text-gradient transition-colors">
                       {info.label}
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    <p className="text-slate-500 dark:text-slate-400 text-sm">
                       {info.value}
                     </p>
                   </div>
@@ -134,10 +134,10 @@ export default function Contact() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl">✨</span>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  <h4 className="font-semibold text-slate-800 dark:text-white mb-2">
                     Open for Opportunities
                   </h4>
-                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     Currently available for Machine Learning, Data Science, and Full-Stack Development roles. Let&apos;s discuss how we can work together!
                   </p>
                 </div>
@@ -151,9 +151,9 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="glass p-8 rounded-xl border border-gray-200/50 dark:border-gray-700/50 space-y-6">
+            <form onSubmit={handleSubmit} className="glass p-8 rounded-xl border border-blue-100/40 dark:border-white/10 space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">
                   Your Name
                 </label>
                 <input
@@ -163,13 +163,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 glass border-2 border-gray-300/50 dark:border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                  className="w-full px-4 py-3 glass border-2 border-blue-200/40 dark:border-slate-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">
                   Your Email
                 </label>
                 <input
@@ -179,13 +179,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 glass border-2 border-gray-300/50 dark:border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                  className="w-full px-4 py-3 glass border-2 border-blue-200/40 dark:border-slate-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">
                   Your Message
                 </label>
                 <textarea
@@ -195,7 +195,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 glass border-2 border-gray-300/50 dark:border-gray-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 resize-none"
+                  className="w-full px-4 py-3 glass border-2 border-blue-200/40 dark:border-slate-600/50 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 resize-none"
                   placeholder="Tell me about your project or idea..."
                 />
               </div>
