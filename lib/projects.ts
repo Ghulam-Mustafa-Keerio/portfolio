@@ -105,8 +105,8 @@ export const projects: Project[] = [
     id: 'autonomous-analyst',
     title: 'Autonomous Analyst',
     tagline: 'AI-powered data analysis platform',
-    description: 'Industry data analysis platform leveraging Firebase Studio',
-    longDescription: 'This project analyzes industry data and provides automated visualizations and insights with comprehensive final reports using Firebase integration.',
+    description: 'Intelligent data analysis platform automating insights and visualizations using AI',
+    longDescription: 'An advanced autonomous data analysis platform that leverages Firebase Studio and AI to automatically understand industry data, generate dynamic visualizations, extract meaningful insights, and produce comprehensive analytical reports. Built with TypeScript and React for a seamless user experience.',
     image: '/images/projects/analyst.jpg',
     category: 'full-stack',
     tags: ['TypeScript', 'Firebase', 'Data Visualization', 'Full-Stack'],
@@ -118,6 +118,30 @@ export const projects: Project[] = [
       'Comprehensive reporting'
     ],
     technologies: ['TypeScript', 'React', 'Firebase', 'Chart.js']
+  },
+  {
+    id: 'portfolio',
+    title: 'Personal Portfolio Website',
+    tagline: 'Modern developer portfolio with animations',
+    description: 'A polished, responsive portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion animations.',
+    longDescription: 'A modern, visually stunning portfolio website featuring dark/light theme, smooth scroll animations, glassmorphism UI, typing effects, and a complete showcase of ML and data science projects.',
+    image: '/images/projects/portfolio.jpg',
+    category: 'full-stack',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    metrics: [
+      { label: 'Framework', value: 'Next.js 15' },
+      { label: 'Theme', value: 'Dark/Light' }
+    ],
+    github: 'https://github.com/Ghulam-Mustafa-Keerio/portfolio',
+    demo: 'https://portfolio-ghulam-mustafa-keerio.vercel.app',
+    features: [
+      'Responsive design',
+      'Dark/Light theme toggle',
+      'Framer Motion animations',
+      'Glassmorphism UI',
+      'TypeScript throughout'
+    ],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React']
   },
   {
     id: 'text-emotion',
