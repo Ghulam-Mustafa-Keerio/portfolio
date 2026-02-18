@@ -78,18 +78,21 @@ export default function Footer() {
               Connect
             </h4>
             <div className="flex space-x-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-gray-200 dark:bg-gray-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  aria-label={link.name}
-                >
-                  <link.icon size={20} />
-                </a>
-              ))}
+              {socialLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-200 dark:bg-gray-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    aria-label={link.name}
+                  >
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
