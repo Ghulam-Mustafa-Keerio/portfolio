@@ -56,7 +56,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+      className="py-20 bg-gradient-to-b from-white to-blue-50/30 dark:from-[#0a0a0a] dark:to-slate-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -65,10 +65,10 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             About <span className="text-gradient">Me</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             Passionate about building intelligent systems that make a difference
           </p>
         </motion.div>
@@ -82,11 +82,11 @@ export default function About() {
             className="space-y-6"
           >
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 I&apos;m a passionate <span className="font-semibold text-gradient">Machine Learning Engineer</span> and{' '}
                 <span className="font-semibold text-gradient">Data Scientist</span> with expertise in Emotion AI, Natural Language Processing, and Full-Stack Development.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 I specialize in building intelligent systems that understand human emotions through voice, text, and behavioral patterns. With a proven track record of achieving state-of-the-art results, I combine deep technical knowledge with practical problem-solving to create production-ready machine learning systems.
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function About() {
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="border-l-4 border-blue-500 dark:border-blue-400 pl-4 py-2 italic text-gray-700 dark:text-gray-300 bg-blue-50/50 dark:bg-blue-900/10 rounded-r-lg"
+              className="border-l-4 border-blue-500 dark:border-blue-400 pl-4 py-2 italic text-slate-600 dark:text-slate-300 bg-blue-50/30 dark:bg-blue-900/10 rounded-r-lg"
             >
               &quot;Transforming data into intelligence, and intelligence into impact through innovative AI solutions.&quot;
             </motion.blockquote>
@@ -107,7 +107,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">What I Do</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">What I Do</h3>
               <ul className="space-y-3">
                 {whatIDo.map((item, index) => (
                   <motion.li
@@ -115,7 +115,7 @@ export default function About() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                     transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                    className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
+                    className="flex items-start gap-3 text-slate-600 dark:text-slate-300"
                   >
                     <FiCheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
                     <span>{item}</span>
@@ -149,7 +149,7 @@ export default function About() {
           >
             {/* Gradient border wrapper */}
             <div className="relative p-1 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-              <div className="bg-white dark:bg-gray-900 rounded-2xl p-6">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl p-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {achievements.map((achievement, index) => (
                     <motion.div
@@ -178,10 +178,10 @@ export default function About() {
                       </div>
                       
                       {/* Label and description */}
-                      <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+                      <div className="text-sm font-semibold text-slate-800 dark:text-white mb-1">
                         {achievement.label}
                       </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">
+                      <div className="text-xs text-slate-500 dark:text-slate-400">
                         {achievement.description}
                       </div>
                     </motion.div>

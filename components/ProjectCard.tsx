@@ -43,7 +43,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8 }}
-      className="group glass rounded-xl overflow-hidden border-2 border-gray-200/50 dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl transition-all duration-300 relative"
+      className="group glass rounded-xl overflow-hidden border border-blue-100/40 dark:border-white/10 hover:border-transparent hover:shadow-2xl transition-all duration-300 relative"
     >
       {/* Gradient border on hover */}
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm"></div>
@@ -83,17 +83,17 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Card body */}
       <div className="p-6 space-y-4">
         {/* Project title */}
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-gradient transition-all duration-300">
+        <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-gradient transition-all duration-300">
           {project.title}
         </h3>
 
         {/* Tagline */}
-        <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+        <p className="text-sm text-slate-500 dark:text-slate-400 italic">
           {project.tagline}
         </p>
 
         {/* Description with line clamp */}
-        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed line-clamp-3">
+        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed line-clamp-3">
           {project.description}
         </p>
 
@@ -106,7 +106,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 whileHover={{ scale: 1.05 }}
                 className="glass px-3 py-1.5 rounded-lg border border-blue-500/20 hover:border-blue-500/50 transition-colors"
               >
-                <span className="text-xs text-gray-600 dark:text-gray-400">{metric.label}: </span>
+                <span className="text-xs text-slate-500 dark:text-slate-400">{metric.label}: </span>
                 <span className="text-sm font-bold text-gradient">{metric.value}</span>
               </motion.div>
             ))}
@@ -118,20 +118,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           {project.tags.slice(0, 4).map((tag, idx) => (
             <span
               key={idx}
-              className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 text-gray-700 dark:text-gray-300 rounded-full border border-gray-300/30 dark:border-gray-600/30"
+              className="px-3 py-1 text-xs font-medium bg-blue-50/50 dark:bg-white/5 text-slate-600 dark:text-slate-300 rounded-full border border-blue-100/50 dark:border-white/10"
             >
               {tag}
             </span>
           ))}
           {project.tags.length > 4 && (
-            <span className="px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
+            <span className="px-3 py-1 text-xs font-medium text-slate-400 dark:text-slate-500">
               +{project.tags.length - 4}
             </span>
           )}
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
+        <div className="h-px bg-gradient-to-r from-transparent via-blue-200/50 dark:via-slate-700 to-transparent"></div>
 
         {/* Footer with action buttons */}
         <div className="flex items-center gap-3">
@@ -153,7 +153,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 glass border-2 border-purple-500/30 hover:border-purple-500/60 text-gray-900 dark:text-white rounded-lg font-medium transition-all hover:shadow-lg text-sm"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 glass border border-purple-200/50 dark:border-purple-500/30 hover:border-purple-400/60 text-slate-800 dark:text-white rounded-lg font-medium transition-all hover:shadow-lg text-sm"
             >
               <FiExternalLink size={16} />
               <span>Demo</span>

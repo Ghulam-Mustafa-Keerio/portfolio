@@ -16,7 +16,7 @@ const roles = [
 const techBadges = [
   { icon: SiPython, label: 'Python', color: 'from-blue-400 to-blue-600' },
   { icon: SiPytorch, label: 'PyTorch', color: 'from-orange-400 to-red-600' },
-  { icon: SiNextdotjs, label: 'Next.js', color: 'from-gray-700 to-black' },
+  { icon: SiNextdotjs, label: 'Next.js', color: 'from-slate-600 to-slate-900' },
   { icon: SiTensorflow, label: 'TensorFlow', color: 'from-orange-500 to-orange-600' },
 ];
 
@@ -67,15 +67,13 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Animated mesh gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.05),transparent_50%)]"></div>
+      {/* Clean transparent background with soft color wash */}
+      <div className="absolute inset-0 bg-white dark:bg-[#0a0a0a]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(59,130,246,0.06),transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(139,92,246,0.06),transparent_60%)]"></div>
+        <div className="absolute inset-0 dark:bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 dark:bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.15),transparent_50%)]"></div>
       </div>
-
-      {/* Animated grid pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgwLDAsMCwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] dark:bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
 
       {/* Floating Particles */}
       <FloatingParticles />
@@ -91,7 +89,7 @@ export default function Hero() {
           >
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-rotate opacity-75 blur-lg"></div>
-              <div className="relative w-40 h-40 rounded-full ring-4 ring-blue-500/50 dark:ring-blue-400/50 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+              <div className="relative w-40 h-40 rounded-full ring-4 ring-blue-500/30 dark:ring-blue-400/50 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
                 <span className="text-6xl font-bold text-white">GMK</span>
               </div>
             </div>
@@ -104,7 +102,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
-              <span className="text-gray-900 dark:text-white">Hi, I&apos;m </span>
+              <span className="text-slate-900 dark:text-white">Hi, I&apos;m </span>
               <span className="text-gradient">
                 Ghulam Mustafa Keerio
               </span>
@@ -129,7 +127,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 mb-8 max-w-3xl mx-auto"
           >
             Building intelligent systems that understand human emotions with{' '}
             <span className="font-semibold text-gradient">91.3% accuracy</span> in audio recognition
@@ -152,7 +150,7 @@ export default function Hero() {
                 className="glass px-4 py-2 rounded-full flex items-center gap-2 hover:shadow-lg transition-shadow"
               >
                 <badge.icon className={`text-lg bg-gradient-to-r ${badge.color} text-transparent bg-clip-text`} />
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <span className="text-sm font-medium text-slate-600 dark:text-slate-300">
                   {badge.label}
                 </span>
               </motion.div>
@@ -177,7 +175,7 @@ export default function Hero() {
                 <span className="text-2xl">{stat.icon}</span>
                 <div className="text-left">
                   <div className="text-sm font-medium text-gradient">{stat.value}</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">{stat.label}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400">{stat.label}</div>
                 </div>
               </motion.div>
             ))}
@@ -199,7 +197,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => window.open('/cv.pdf', '_blank')}
-              className="group px-8 py-4 glass hover:bg-white/10 text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 rounded-lg font-medium transition-all hover:scale-105 flex items-center gap-2"
+              className="group px-8 py-4 glass hover:bg-white/10 text-slate-800 dark:text-white border border-blue-200/60 dark:border-slate-600 rounded-lg font-medium transition-all hover:scale-105 flex items-center gap-2"
             >
               <FiDownload className="group-hover:translate-y-0.5 transition-transform" />
               Download CV
@@ -258,8 +256,8 @@ export default function Hero() {
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-sm text-gray-600 dark:text-gray-400 font-medium">Scroll Down</span>
-          <FiArrowDown className="text-gray-600 dark:text-gray-400" size={24} />
+          <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">Scroll Down</span>
+          <FiArrowDown className="text-slate-500 dark:text-slate-400" size={24} />
         </motion.div>
       </motion.div>
     </section>
