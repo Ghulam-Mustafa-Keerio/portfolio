@@ -82,10 +82,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Let's Build Something <span className="text-gradient">Amazing Together</span>
+            Let&apos;s Build Something <span className="text-gradient">Amazing Together</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to turn your ideas into reality? Drop me a message and let's start creating!
+            Ready to turn your ideas into reality? Drop me a message and let&apos;s start creating!
           </p>
         </motion.div>
 
@@ -138,7 +138,7 @@ export default function Contact() {
                     Open for Opportunities
                   </h4>
                   <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Currently available for Machine Learning, Data Science, and Full-Stack Development roles. Let's discuss how we can work together!
+                    Currently available for Machine Learning, Data Science, and Full-Stack Development roles. Let&apos;s discuss how we can work together!
                   </p>
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function Contact() {
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-xl">✅</span>
-                    <span className="font-medium">Message sent successfully! I'll get back to you soon.</span>
+                    <span className="font-medium">Message sent successfully! I&apos;ll get back to you soon.</span>
                   </div>
                 </motion.div>
               )}

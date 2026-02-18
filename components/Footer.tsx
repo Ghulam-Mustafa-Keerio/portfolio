@@ -110,7 +110,7 @@ export default function Footer() {
               })}
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-              Let's create something amazing together
+              Let&apos;s create something amazing together
             </p>
           </div>
         </div>

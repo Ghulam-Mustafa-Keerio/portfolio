@@ -104,7 +104,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
-              <span className="text-gray-900 dark:text-white">Hi, I'm </span>
+              <span className="text-gray-900 dark:text-white">Hi, I&apos;m </span>
               <span className="text-gradient">
                 Ghulam Mustafa Keerio
               </span>

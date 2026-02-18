@@ -83,7 +83,7 @@ export default function About() {
           >
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                I'm a passionate <span className="font-semibold text-gradient">Machine Learning Engineer</span> and{' '}
+                I&apos;m a passionate <span className="font-semibold text-gradient">Machine Learning Engineer</span> and{' '}
                 <span className="font-semibold text-gradient">Data Scientist</span> with expertise in Emotion AI, Natural Language Processing, and Full-Stack Development.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
@@ -98,7 +98,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="border-l-4 border-blue-500 dark:border-blue-400 pl-4 py-2 italic text-gray-700 dark:text-gray-300 bg-blue-50/50 dark:bg-blue-900/10 rounded-r-lg"
             >
-              "Transforming data into intelligence, and intelligence into impact through innovative AI solutions."
+              &quot;Transforming data into intelligence, and intelligence into impact through innovative AI solutions.&quot;
             </motion.blockquote>
 
             {/* What I Do */}
