@@ -57,7 +57,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"
+      className="py-20 bg-white dark:from-gray-800 dark:to-gray-900 dark:bg-gradient-to-b"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

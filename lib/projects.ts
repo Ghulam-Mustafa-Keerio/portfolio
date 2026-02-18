@@ -178,6 +178,28 @@ export const projects: Project[] = [
     technologies: ['Python', 'NLP', 'Flask', 'DialogFlow']
   },
   {
+    id: 'fake-news-detection',
+    title: 'Fake News Detection System',
+    tagline: 'AI-powered misinformation detection',
+    description: 'Machine learning system for detecting fake news articles using NLP and deep learning techniques',
+    longDescription: 'An intelligent fake news detection system that leverages natural language processing and deep learning to classify news articles as real or fake. The system uses advanced text analysis, feature engineering, and transformer-based models to identify misinformation with high accuracy.',
+    image: '/images/projects/fake-news.jpg',
+    category: 'ml',
+    tags: ['NLP', 'Deep Learning', 'Text Classification', 'Transformers', 'Python'],
+    metrics: [
+      { label: 'Task', value: 'Classification' },
+      { label: 'Type', value: 'NLP' }
+    ],
+    github: 'https://github.com/Ghulam-Mustafa-Keerio/fack-neww-detection-system',
+    features: [
+      'Fake vs real news classification',
+      'NLP-based text analysis',
+      'Deep learning model architecture',
+      'Feature engineering pipeline'
+    ],
+    technologies: ['Python', 'TensorFlow', 'NLTK', 'Scikit-learn', 'Pandas']
+  },
+  {
     id: 'research-work',
     title: 'Research Work - Algorithm Evaluation',
     tagline: 'ML algorithm benchmarking',

@@ -68,11 +68,11 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden"
+      className="py-20 bg-white dark:from-gray-900 dark:to-gray-800 dark:bg-gradient-to-b relative overflow-hidden"
     >
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.15),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.1),transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.15),transparent_50%)]"></div>
+      {/* Background glow (dark mode only) */}
+      <div className="absolute inset-0 hidden dark:block dark:bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.15),transparent_50%)]"></div>
+      <div className="absolute inset-0 hidden dark:block dark:bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.15),transparent_50%)]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div

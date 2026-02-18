@@ -56,7 +56,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+      className="py-20 bg-white dark:from-gray-900 dark:to-gray-800 dark:bg-gradient-to-b"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

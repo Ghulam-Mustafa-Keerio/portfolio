@@ -4,11 +4,11 @@
 
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
+  --bg-secondary: #ffffff;
   --accent: #2563eb;
   --accent-2: #7c3aed;
-  --text-primary: #0a0a0a;
-  --text-secondary: #52525b;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
 }
 
 [data-theme='dark'] {
@@ -117,9 +117,14 @@ body {
   
   /* Glassmorphism effects */
   .glass {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  :is(.dark) .glass {
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
@@ -201,8 +206,13 @@ body {
   /* Card base */
   .card {
     background-color: var(--bg-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  :is(.dark) .card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 }
