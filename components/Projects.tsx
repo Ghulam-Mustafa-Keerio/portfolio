@@ -27,7 +27,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="py-20 bg-white dark:bg-gray-900"
+      className="py-20 bg-gradient-to-b from-blue-50/20 to-white dark:from-slate-900 dark:to-[#0a0a0a]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -36,10 +36,10 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             Showcasing ML engineering excellence and innovative solutions
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ export default function Projects() {
               className={`px-6 py-2 rounded-lg font-medium transition-all ${
                 activeCategory === category.id
                   ? 'bg-blue-600 text-white shadow-lg scale-105'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  : 'bg-blue-50/50 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-blue-100/50 dark:hover:bg-white/10 border border-blue-100/50 dark:border-white/10'
               }`}
             >
               {category.name}
@@ -75,7 +75,7 @@ export default function Projects() {
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-slate-500 dark:text-slate-400">
               No projects found in this category.
             </p>
           </div>

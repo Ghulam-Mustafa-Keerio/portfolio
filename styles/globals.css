@@ -4,11 +4,11 @@
 
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
+  --bg-secondary: #f8fafc;
   --accent: #2563eb;
   --accent-2: #7c3aed;
-  --text-primary: #0a0a0a;
-  --text-secondary: #52525b;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
 }
 
 [data-theme='dark'] {
@@ -117,10 +117,17 @@ body {
   
   /* Glassmorphism effects */
   .glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  :is(.dark) .glass {
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
   
   .glass-dark {
@@ -200,9 +207,15 @@ body {
   
   /* Card base */
   .card {
-    background-color: var(--bg-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  :is(.dark) .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
 }
